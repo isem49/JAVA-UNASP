@@ -3,10 +3,10 @@ public class App {
       
         Carro carro = new Carro();
 
-        carro.setAno(2002);
-        carro.setMarca("Alguma ai");
-        carro.setModelo("teste");
-        carro.setCor("Azul");
+        //carro.setAno(2002);
+        //carro.setMarca("Alguma ai");
+        //carro.setModelo("teste");
+       //carro.setCor("Azul");
 
         /* 
         System.out.println("Ano: " + carro.getAno());

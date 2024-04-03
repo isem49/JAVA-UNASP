@@ -5,6 +5,14 @@ public class Carro {
     private int ano;
     private String cor;
 
+    //Construtores
+    public Carro(String marca, String modelo, int ano, String cor) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+        this.cor = cor;
+    }
+
     //metodos Gets
     public String getModelo() {
         return this.modelo;
@@ -38,6 +46,9 @@ public class Carro {
     public void setMarca(String marca) {
         this.marca = marca;
     }
+
+    
+    
     
 
     public void exibirInfo(){
