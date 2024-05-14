@@ -1,69 +1,33 @@
-public class Livro {
-
-    private String titulo;
-    private String autor;
-    private int anoPublicacao;
-    private boolean emprestado = false;
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public int getAnoPublicacao() {
-        return anoPublicacao;
-    }
-
-    public void setAnoPublicacao(int anoPublicacao) {
-        this.anoPublicacao = anoPublicacao;
-    }
-
-    public boolean isEmprestado() {
-        return emprestado;
-    }
-
+public class Livro extends Material {
+    
+    private int numeroPaginas;
 
     public Livro() {
-       
+        
     }
 
-    public Livro(String titulo, String autor, int anoPublicacao) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.anoPublicacao = anoPublicacao;
-        this.emprestado = false;
+    public Livro(String titulo, String autor, int anoPublicacao, int numeroPaginas) {
+        super(titulo, autor, anoPublicacao);
+        this.numeroPaginas = numeroPaginas;
     }
 
-    public void emprestar(){
-            this.emprestado = true;        
+    public int getNumeroPaginas() {
+        return numeroPaginas;
     }
 
-    public void devolver(){
-        this.emprestado = false;       
+    public void setNumeroPaginas(int numeroPaginas) {
+        this.numeroPaginas = numeroPaginas;
     }
 
-    public void exibirInformacoes(){
-
-        System.out.println("Título: " + this.getTitulo());
-        System.out.println("Autor: " + this.getAutor());
-        System.out.println("Ano da Publicação: " + this.getAnoPublicacao());
-        System.out.println("Emprestado: " + this.isEmprestado());
-
-
+    public void exibirDetalhes(){
+        System.out.println("------Informações---------");
+        System.out.println("Autor: " +  super.getAutor());
+        System.out.println("Tituloi: " +  super.getTitulo());
+        System.out.println("Ano da Publicação: " +  super.getAnoPublicacao());
+        System.out.println("Número de Paginas: " +  this.getNumeroPaginas());
+        
+        
     }
-
-
-
     
+
 }
