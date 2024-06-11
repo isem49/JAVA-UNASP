@@ -2,20 +2,23 @@ public class Professor extends Pessoa {
 
     private int salario;
     private String disciplina;
+    private int qtdaAula;
 
     public Professor() {
 
     }
 
-    public Professor(int salario, String disciplina) {
+    public Professor(int salario, String disciplina, int qtdaAula) {
         this.salario = salario;
         this.disciplina = disciplina;
+        this.qtdaAula = qtdaAula;
     }
 
-    public Professor(String nome, int idade, String cpf, int salario, String disciplina) {
+    public Professor(String nome, int idade, String cpf, int salario, String disciplina, int qtdaAula) {
         super(nome, idade, cpf);
         this.salario = salario;
         this.disciplina = disciplina;
+        this.qtdaAula = qtdaAula;
     }
 
     public int getSalario() {
@@ -34,6 +37,14 @@ public class Professor extends Pessoa {
         this.disciplina = disciplina;
     }
 
+    public int getQtdaAula() {
+        return qtdaAula;
+    }
+
+    public void setQtdaAula(int qtdaAula) {
+        this.qtdaAula = qtdaAula;
+    }
+
     public void exibirDados() {
 
         System.out.println("------Informações---------");
@@ -42,12 +53,13 @@ public class Professor extends Pessoa {
         System.out.println("CPF: " + super.getCpf());
         System.out.println("Disciplina: " + this.getDisciplina());
         System.out.println("Salario: " + this.getSalario());
+        System.out.println("Quantidade de Aulas: " + this.getQtdaAula());
 
     }
 
-    public void darAula() {
+    public void darAula(int qtdaAula) {
 
-        System.out.println("Dar aula");
+       this.qtdaAula = qtdaAula;
 
     }
 

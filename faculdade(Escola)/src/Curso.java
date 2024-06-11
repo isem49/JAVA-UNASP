@@ -1,14 +1,14 @@
-import java.util.List;
+import java.util.ArrayList;
+
 
 public class Curso {
 
     private String nome;
     private int codigo;
     private String professorResponsavel;
-    private List<Aluno> alunos;
+    private ArrayList<Aluno> alunos;
 
     public Curso() {
-        this.nome = nome;
 
     }
 
@@ -43,15 +43,18 @@ public class Curso {
     }
 
     public void adicionarAluno(Aluno aluno) {
-
+        alunos.add(aluno);
     }
 
     public void removerAluno(Aluno aluno) {
-
+        alunos.remove(aluno);
     }
 
-    public void listarAlunos(Aluno aluno) {
-
+    public void listarAlunos() {
+        System.out.println("Alunos do curso " + nome + ":");
+        for (Aluno aluno : alunos) {
+            System.out.println("Nome: " + aluno.getNome() + ", Matrícula: " + aluno.getMatricula());
+        }
     }
 
 }
